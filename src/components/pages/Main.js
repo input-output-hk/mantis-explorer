@@ -27,10 +27,11 @@ const Main = ({ web3: { eth }}) => {
   const getLatestBlocks = async () => {
     const latestBlockNumber = await promisify(eth.getBlockNumber)();
     const latestBlockKnown = getLatestBlockKnown();
-    const fromBlock = Math.max(latestBlockNumber - MAX_HISTORY, latestBlockKnown + 1);    
+    const fromBlock = Math.max(latestBlockNumber - MAX_HISTORY, latestBlockKnown);    
     return _.compact(
       await Promise.all(
-        _.range(latestBlockNumber, fromBlock, -1).map(blockNumber => {
+        // Tange doesn't influde the end!
+        _.range(latestBlockNumber, fromBlock - 1, -1).map(blockNumber => {
           return loadBlocks(eth, blockNumber)
         })
       )
