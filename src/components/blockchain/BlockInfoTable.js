@@ -46,7 +46,11 @@ const BlockInfoTable = ({ block, latestBlockNumber }) => {
         </tr>
         <tr>
             <td>Size</td>
-            <td>{ block.size} bytes</td>
+            <td>{ block.size } bytes</td>
+        </tr>
+        <tr>
+            <td>Miner address (coinbase)</td>
+            <td>{ block.miner }</td>
         </tr>
         <tr>
             <td>Gas limit</td>
