@@ -37,9 +37,7 @@ class Header extends Component {
           </div>
           <div className="pure-u-1 pure-u-md-1-2">
               <div className="pure-menu header-align-right">
-                  <ul className="pure-menu-list header-nav-search">
-                      <li className="pure-menu-item"><Link className="pure-menu-link" to={`${process.env.PUBLIC_URL}/`}>Home</Link></li>
-                      <li className="pure-menu-item"><Link className="pure-menu-link" to={`${process.env.PUBLIC_URL}/status`}>Status</Link></li>
+                  <ul className="pure-menu-list">
                       <li className="pure-menu-item">
                         <form onSubmit={event => this.onSubmit(event)}>
                           <input id="search-box" name="q" size="40" type="text" placeholder="Tx Hash, Address, or Block #" onChange={event => this.updateSearchStr(event)}/>

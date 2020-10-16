@@ -12,7 +12,6 @@ import Main from './Main';
 import BlockDetails from './BlockDetails';
 import AccountDetails from './AccountDetails';
 import TransactionDetails from './TransactionDetails';
-import Status from './Status';
 
 export const Router = withWeb3(({ web3 }) => {
   
@@ -47,7 +46,6 @@ export const Router = withWeb3(({ web3 }) => {
                   <Route path={`${process.env.PUBLIC_URL}/block/:id`} render={(props) => <BlockDetails {...props} web3={web3}/>}/>
                   <Route path={`${process.env.PUBLIC_URL}/account/:address`} render={(props) => <AccountDetails {...props} web3={web3}/>}/>
                   <Route path={`${process.env.PUBLIC_URL}/transaction/:id`} render={(props) => <TransactionDetails {...props} web3={web3}/>}/>
-                  <Route exact path={`${process.env.PUBLIC_URL}/status`} render={(_) => <Status web3={web3}/>}/>
                 </Switch>
               }
             </div>

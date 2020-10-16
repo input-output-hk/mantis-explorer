@@ -30,7 +30,7 @@ const Main = ({ web3: { eth }}) => {
     const fromBlock = Math.max(latestBlockNumber - MAX_HISTORY, latestBlockKnown);    
     return _.compact(
       await Promise.all(
-        // Tange doesn't influde the end!
+        // Range doesn't influde the end!
         _.range(latestBlockNumber, fromBlock - 1, -1).map(blockNumber => {
           return loadBlocks(eth, blockNumber)
         })
