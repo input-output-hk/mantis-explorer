@@ -4,6 +4,8 @@ mkYarnPackage {
   src       = ./.;
 
   WEB3_PROVIDER = "/rpc/node";
+  BABEL_ENV = "development";
+  NODE_ENV = "development";
 
   doCheck    = true;
   checkPhase = "yarn test --coverage --ci";
