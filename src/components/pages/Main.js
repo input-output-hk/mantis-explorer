@@ -152,7 +152,7 @@ const Main = ({ web3: { eth }}) => {
     <div className="content">
       <div className="pure-g main-container">
         <div className="pure-u-1-1 container">
-          <h2>Latest blocks</h2>
+          <h2 className="title">Latest blocks</h2>
           <AsyncBlocksTable {...latestBlocks} />
         </div>
       </div>

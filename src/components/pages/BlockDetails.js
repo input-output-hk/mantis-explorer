@@ -39,8 +39,8 @@ const BlockDetails = ({web3, match}) => {
 
     return (
       <div>
-        <Link className={`pure-button pure-button-primary ${prevEnabled}`} to={`${process.env.PUBLIC_URL}/block/${blockNumber - 1}`}>Prev</Link>
-        <Link className={`pure-button pure-button-primary ${nextEnabled}`} to={`${process.env.PUBLIC_URL}/block/${blockNumber + 1}`}>Next</Link>
+        <Link className={`pure-button pure-button-primary ${prevEnabled}`} to={`${process.env.PUBLIC_URL}/block/${blockNumber - 1}`}>prev</Link>
+        <Link className={`pure-button pure-button-primary ${nextEnabled}`} to={`${process.env.PUBLIC_URL}/block/${blockNumber + 1}`}>next</Link>
       </div>
     )
   }
@@ -50,7 +50,7 @@ const BlockDetails = ({web3, match}) => {
       return null
     return (
       <div className="pure-u-1-1 container">
-        <h2>Transactions</h2>
+        <h2 className="title">Transactions</h2>
         <TransactionsTable transactions={transactions} />
       </div>
     )
@@ -62,7 +62,7 @@ const BlockDetails = ({web3, match}) => {
         {renderButtons(state.block.number, state.latestBlockNumber)}
         <div className="pure-g main-container">
           <div className="pure-u-1-1 container">
-            <h2>Block details</h2>
+            <h2 className="title">Block details</h2>
             <BlockInfoTable block={state.block} latestBlockNumber={state.latestBlockNumber} />
           </div>
           {renderTxs(state.transactions)}

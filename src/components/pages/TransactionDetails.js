@@ -46,7 +46,7 @@ class TransactionDetails extends Component {
   renderContents() {
     return (
       <div className="content container">
-        <h2>Transaction details</h2>
+        <h2 className="title">Transaction details</h2>
         <TransactionInfoTable tx={this.state.tx} receipt={this.state.receipt} />
       </div>
     )
