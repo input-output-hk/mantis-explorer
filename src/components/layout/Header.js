@@ -41,7 +41,7 @@ class Header extends Component {
                       <li className="pure-menu-item">
                         <form onSubmit={event => this.onSubmit(event)}>
                           <input id="search-box" name="q" size="40" type="text" placeholder="Tx Hash, Address, or Block #" onChange={event => this.updateSearchStr(event)}/>
-                          <input id="search-btn" value="Search" type="submit"/>
+                          <input id="search-btn" value="search" type="submit"/>
                         </form>
                       </li>
                   </ul>

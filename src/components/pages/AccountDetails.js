@@ -45,7 +45,7 @@ class AccountDetails extends Component {
   renderContents() {
     return (
       <div className="content container">
-        <h2>Account details</h2>
+        <h2 className="title">Account details</h2>
         <AccountInfoTable account={this.state.account}/>
       </div>
     )

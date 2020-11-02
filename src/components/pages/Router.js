@@ -12,6 +12,7 @@ import Main from './Main';
 import BlockDetails from './BlockDetails';
 import AccountDetails from './AccountDetails';
 import TransactionDetails from './TransactionDetails';
+import { Layout } from 'antd';
 
 export const Router = withWeb3(({ web3 }) => {
   
@@ -35,7 +36,8 @@ export const Router = withWeb3(({ web3 }) => {
   // TODO: Refactor to avoid passing web3 to other components
   return (
     <BrowserRouter>
-      <div>
+      <Layout>
+      <div className="app">
         <Header key="header" onSearch={onSearch} />
         <main key="body">
           <div className="content-wrapper">
@@ -52,6 +54,8 @@ export const Router = withWeb3(({ web3 }) => {
           </div>
         </main>
       </div>
+      </Layout>
+
     </BrowserRouter>
   )
 });
