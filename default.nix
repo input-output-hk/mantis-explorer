@@ -1,3 +1,6 @@
+# NOTE this is left for backwards compatibility with current mantis-ops/master
+#      but can (and should) be removed (along with `nix/*`) once mantis-ops/darwin
+#      is merged. kthxbye
 { src    ? ./.
 , system ? builtins.currentSystem }:
 
