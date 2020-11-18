@@ -43,7 +43,7 @@ class TransactionDetails extends Component {
     this.componentWillReceiveProps(this.props)
   }
 
-  renderContents() {
+  renderContents = () => {
     return (
       <div className="content container">
         <h2 className="title">Transaction details</h2>
@@ -59,7 +59,7 @@ class TransactionDetails extends Component {
           entity={this.state.tx}
           error={this.state.error}
           errorMessage={`Transaction ${this.props.match.params.id} was not found`}
-          render={this.renderContents.bind(this)}/>
+          render={this.renderContents}/>
       </div>
     );
   }
