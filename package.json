@@ -1,6 +1,6 @@
 {
   "name": "mantis-explorer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://www.iohk.io",
   "private": true,
   "dependencies": {
