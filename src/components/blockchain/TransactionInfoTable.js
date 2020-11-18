@@ -11,7 +11,7 @@ const translateReceiptStatusCode = statusCode => {
   }
 };
 
-const TransactionInfoTable = (tx, receipt) => {
+const TransactionInfoTable = ({tx, receipt}) => {
   return (
     <table className="pure-table pure-table-horizontal">
       <thead>
@@ -46,13 +46,13 @@ const TransactionInfoTable = (tx, receipt) => {
           <tr>
             <td>Status code</td>
             <td>
-              <span> { receipt.statusCode } : { translateReceiptStatusCode(receipt.statusCode) } </span>
+              <span> { receipt.statusCode ? `${receipt.statusCode} : ${translateReceiptStatusCode(receipt.statusCode)}` : '???' } </span>
             </td>
           </tr>
         }
         <tr>
           <td>value</td>
-          <td>{tx.transparentValue}</td>
+          <td>{tx.value}</td>
         </tr>
         {receipt && 
           <tr>
@@ -70,7 +70,9 @@ const TransactionInfoTable = (tx, receipt) => {
         </tr>
         <tr>
           <td>Payload</td>
-          <td><Input.TextArea value={tx.payload} rows={4} /></td>
+          <td>
+            { tx.payload ? <Input.TextArea value={tx.payload} rows={4} /> : '' }
+          </td>
         </tr>
       </tbody>
     </table>

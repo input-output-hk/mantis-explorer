@@ -20,7 +20,8 @@ const BlockRow = ({block}) => {
         <td>{isCheckpointBlock(block) ? 'Yes' : 'No'}</td>
         <td>{bigNumber(block.difficulty)}</td>
         <td>{block.gasUsed}</td>
-        <td>{block.transactions.length > 0 ? block.transactions.length - 1: block.transactions.length}</td>
+        <td>{block.transactions.length}</td>
+        <td>{block.uncles.length}</td>
         <td>{formatTimestamp(block.timestamp)}</td>
     </tr>
   )
@@ -40,6 +41,7 @@ const BlocksTable = ({blocks}) => {
           <th>Difficulty</th>
           <th>Gas used</th>
           <th>Txs</th>
+          <th>Uncles</th>
           <th>Received time</th>
         </tr>
       </thead>

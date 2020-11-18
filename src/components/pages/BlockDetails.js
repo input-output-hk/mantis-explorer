@@ -46,7 +46,7 @@ const BlockDetails = ({web3, match}) => {
   }
 
   const renderTxs = (transactions) => {
-    if (transactions && (transactions.length === 0 || transactions.length === 1))
+    if (transactions && transactions.length === 0)
       return null
     return (
       <div className="pure-u-1-1 container">
