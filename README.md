@@ -7,17 +7,19 @@
 - The project scaffolding was done with React `create-app` command (an older version, pre react-hooks).
 
 ### Installation
-```
-$ yarn install
+
+```sh
+yarn install
 ```
 
-### Build with Nix 
+### Build with Nix
 
-Build using `nix-build`. The reslting derivation is not meant to be installed
-but rather be served by nginx (as is the use case in production). 
+Build using `nix-build`. The resulting derivation is not meant to be installed
+but rather be served by nginx (as is the use case in production).
 
 ### Run
-```
+
+```sh
 $ yarn start
 
 > Compiled successfully!
@@ -35,18 +37,20 @@ To create a production build, use yarn build.
 **IF YOU WANT TO CHANGE THE PROVIDER, PLEASE SETUP THE ENV VARIABLE: WEB3_PROVIDER=$NODE_RPC_URL**
 
 example:
-```
+
+```sh
 # Connect to a Pupa testnet node (VPN access needed)
 WEB3_PROVIDER=http://192.168.85.4:8546 yarn start
 ```
 
 ### Tests
-```
-$ yarn test
+
+```sh
+yarn test
 ```
 
 ### Deployment
-```
-$ yarn deploy
-```
 
+```sh
+yarn deploy
+```
