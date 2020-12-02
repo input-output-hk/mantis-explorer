@@ -1,3 +1,1 @@
-{ src ? ./. }: {
-  mantis-explorer = import src {};
-}
+(import ./flake-compat.nix).defaultNix.hydraJobs
