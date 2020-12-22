@@ -30,7 +30,7 @@ class Header extends Component {
             <div className="pure-menu">
               <ul className="pure-menu-list">
                 <li className="pure-menu-item">
-                  <a href={`${process.env.PUBLIC_URL}/`} className="pure-menu-link title"> Mantis Sagano Explorer </a>
+                  <a href={`${process.env.PUBLIC_URL}/`} className="pure-menu-link title"> KEVM Devnet Explorer </a>
                 </li>
               </ul>
             </div>
