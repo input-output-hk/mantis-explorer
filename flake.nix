@@ -1,23 +1,21 @@
 {
   description = "Mantis Explorer";
 
-  inputs.flake-utils.url = "github:numtide/flake-utils";
+  inputs.utils.url = "github:kreisys/flake-utils";
 
-  outputs = { self, nixpkgs, flake-utils }:
-    let
-      name = "mantis-explorer";
-      systems = [ "x86_64-linux" "x86_64-darwin" ];
-      overlay = final: prev: {
-        ${name}.defaultPackage = final.callPackage ./package.nix { };
-      };
-
-      simpleFlake = flake-utils.lib.simpleFlake
-        {
-          inherit name systems overlay self nixpkgs;
+  outputs = { self, nixpkgs, utils }:
+    utils.lib.simpleFlake
+      {
+        inherit nixpkgs;
+        name = "mantis-explorer";
+        systems = [ "x86_64-linux" "x86_64-darwin" ];
+        overlay = final: prev: {
+          mantis-explorer = final.callPackage ./package.nix { };
         };
-    in
-    simpleFlake // {
-      hydraJobs = self.packages;
-      inherit overlay;
-    };
+
+        packages = { mantis-explorer }: {
+          inherit mantis-explorer;
+          defaultPackage = mantis-explorer;
+        };
+      };
 }
