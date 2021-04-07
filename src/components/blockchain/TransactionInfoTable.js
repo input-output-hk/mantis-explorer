@@ -3,14 +3,6 @@ import { Link } from 'react-router-dom';
 import { Input } from 'antd';
 import { bigNumber, decToHex } from '../../utils/format-utils';
 
-const translateReceiptStatusCode = statusCode => {
-  switch(parseInt(statusCode, 16)) {
-    case 0: return "Execution failure";
-    case 1: return "Execution success";
-    default: return "???";
-  }
-};
-
 const TransactionInfoTable = ({tx, receipt}) => {
   return (
     <table className="pure-table pure-table-horizontal">
@@ -46,7 +38,7 @@ const TransactionInfoTable = ({tx, receipt}) => {
           <tr>
             <td>Status code</td>
             <td>
-              <span> { receipt.status ? `${receipt.status} : ${translateReceiptStatusCode(receipt.status)}` : '???' } </span>
+              <span> { receipt.status ? "Execution success" : "Execution failed" } </span>
             </td>
           </tr>
         }
