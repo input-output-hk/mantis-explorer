@@ -46,7 +46,7 @@ const TransactionInfoTable = ({tx, receipt}) => {
           <tr>
             <td>Status code</td>
             <td>
-              <span> { receipt.statusCode ? `${receipt.statusCode} : ${translateReceiptStatusCode(receipt.statusCode)}` : '???' } </span>
+              <span> { receipt.status ? `${receipt.status} : ${translateReceiptStatusCode(receipt.status)}` : '???' } </span>
             </td>
           </tr>
         }
