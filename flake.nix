@@ -8,7 +8,6 @@
     utils.lib.simpleFlake
       {
         inherit nixpkgs;
-        name = "mantis-explorer";
         systems = [ "x86_64-linux" "x86_64-darwin" ];
         preOverlays = [ yarn2nix ];
         overlay = final: prev: {
