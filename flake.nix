@@ -2,7 +2,7 @@
   description = "Mantis Explorer";
 
   inputs.utils.url = "github:kreisys/flake-utils";
-  inputs.yarn2nix.url = "github:input-output-hk/yarn2nix/pure-nix";
+  inputs.yarn2nix.url = "github:input-output-hk/yarn2nix";
 
   outputs = { self, nixpkgs, yarn2nix, utils }:
     utils.lib.simpleFlake
