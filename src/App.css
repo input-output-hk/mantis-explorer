@@ -4,7 +4,7 @@
 :root {
   --dark: linear-gradient(309deg, rgba(255,84,83,1) 0%, rgba(0,51,173,1) 100%);
   --principal: #0033ad; /** 38A169 */
-  --secondary: #2094f3;
+  --secondary: rgb(32, 32, 32);
   --info: #8f8f8f;
   --light: #fff;
 }
