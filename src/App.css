@@ -2,11 +2,11 @@
   * App theme variables
   */
 :root {
-  --dark: #121212;
-  --principal: #2094f3; /** 38A169 */
+  --dark: linear-gradient(309deg, rgba(255,84,83,1) 0%, rgba(0,51,173,1) 100%);
+  --principal: #0033ad; /** 38A169 */
   --secondary: #2094f3;
   --info: #8f8f8f;
-  --light: #191a20;
+  --light: #fff;
 }
 
 #body {
@@ -45,6 +45,7 @@ a.pure-button-primary {
   border-radius: 0px;
   margin-right: 5px;
   margin-bottom: 5px;
+  color: white;
 }
 
 .pure-button.pure-button-primary:hover,
@@ -152,6 +153,7 @@ a.pure-button-primary {
   color: var(--dark);
   padding: 10px 5px;
   border: 0 none;
+  color: white;
 }
 
 #search-btn:hover {
@@ -188,4 +190,5 @@ a.pure-button-primary {
   color: var(--principal);
   font-size: 1.0rem;
   font-weight: 800;
+  color: white;
 }
