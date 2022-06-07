@@ -2,11 +2,11 @@
   * App theme variables
   */
 :root {
-  --dark: #000;
-  --principal: #48BB78; /** 38A169 */
-  --secondary: #2F855A;
-  --info: #22543D;
-  --light: #F0FFF4;
+  --dark: linear-gradient(309deg, rgba(255,84,83,1) 0%, rgba(0,51,173,1) 100%);
+  --principal: #0033ad; /** 38A169 */
+  --secondary: rgb(32, 32, 32);
+  --info: #8f8f8f;
+  --light: #fff;
 }
 
 #body {
@@ -15,7 +15,7 @@
 
 .pure-g.pure-g.pure-g [class*=pure-u] {
   color: var(--info);
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /*
@@ -45,6 +45,7 @@ a.pure-button-primary {
   border-radius: 0px;
   margin-right: 5px;
   margin-bottom: 5px;
+  color: white;
 }
 
 .pure-button.pure-button-primary:hover,
@@ -152,6 +153,7 @@ a.pure-button-primary {
   color: var(--dark);
   padding: 10px 5px;
   border: 0 none;
+  color: white;
 }
 
 #search-btn:hover {
@@ -188,4 +190,5 @@ a.pure-button-primary {
   color: var(--principal);
   font-size: 1.0rem;
   font-weight: 800;
+  color: white;
 }
