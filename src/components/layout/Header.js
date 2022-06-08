@@ -30,7 +30,7 @@ class Header extends Component {
             <div className="pure-menu">
               <ul className="pure-menu-list">
                 <li className="pure-menu-item">
-                  <a href={`${process.env.PUBLIC_URL}/`} className="pure-menu-link title"> {process.env.MANTIS_VM} Atago Testnet Explorer </a>
+                  <a href={`${process.env.PUBLIC_URL}/`} className="pure-menu-link title">Atago Testnet Explorer </a>
                 </li>
               </ul>
             </div>
